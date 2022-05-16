@@ -50,6 +50,7 @@ from write import load_db_table
 
 def process_table(BASE_DIR, conn, table_name):
     json_reader = get_json_reader(BASE_DIR, table_name)
+    print("hi this is commited")
     for df in json_reader:
         load_db_table(df, conn, table_name, df.columns[0])
 
